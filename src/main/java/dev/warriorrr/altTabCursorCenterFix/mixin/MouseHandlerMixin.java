@@ -18,7 +18,7 @@ public class MouseHandlerMixin {
     private Minecraft minecraft;
 
     @Inject(method = "releaseMouse", at = @At(value = "FIELD", target = "Lnet/minecraft/client/MouseHandler;mouseGrabbed:Z", opcode = Opcodes.PUTFIELD, shift = At.Shift.AFTER), cancellable = true)
-    private void storeOriginalPos(CallbackInfo info) {
+    private void preventCenterMouseWhileUnfocused(CallbackInfo info) {
         if (!this.minecraft.isWindowActive()) {
             info.cancel();
             // Seems to make the mouse visible
