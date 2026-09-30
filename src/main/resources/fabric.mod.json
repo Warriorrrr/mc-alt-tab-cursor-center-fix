@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "alt-tab-cursor-center-fix",
+  "version": "${version}",
+  "name": "alt-tab-cursor-center-fix",
+  "description": "Fixes the cursor being centered when the game is paused but the window is unfocused.",
+  "authors": ["Warriorrr"],
+  "contact": {
+    "sources": "https://github.com/Warriorrrr/mc-alt-tab-cursor-center-fix"
+  },
+  "license": "MIT",
+  "icon": "assets/alt-tab-cursor-center-fix/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+    ],
+    "main": [
+    ]
+  },
+  "mixins": [
+    "alt-tab-cursor-center-fix.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
